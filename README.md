@@ -1,1 +1,1 @@
-# -bc13_w11d5_hackathon-back-end-room-42-remi-and-joe
+Backend for movies app
