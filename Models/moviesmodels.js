@@ -1,7 +1,8 @@
 import query from "../db/db.js";
 
 async function getMovies() {
-  const data = await query("SELECT * FROM movies;");
+  console.log("test model")
+  const data = await query('SELECT * FROM movies;');
   return data.rows;
 }
 
