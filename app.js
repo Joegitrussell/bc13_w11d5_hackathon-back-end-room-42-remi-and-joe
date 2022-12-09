@@ -1,7 +1,6 @@
 import express from "express";
 import logger from "morgan";
 import cors from "cors";
-const PORT = process.env.PORT;
 import moviesRouter from "./routes/moviesroutes.js";
 
 const app = express();
@@ -12,9 +11,5 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 console.log("testapp")
 app.use("/movies", moviesRouter);
-
-app.listen(PORT, function () {
-  console.log(`Server is listening on http://localhost:${PORT}`);
-});
 
 export default app;
