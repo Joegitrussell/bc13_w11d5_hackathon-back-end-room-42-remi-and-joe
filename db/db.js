@@ -1,8 +1,9 @@
-import pkg from "pg";
-const { Pool } = pkg;
-export const pool = new Pool({
-  connectionString: process.env.POSTGRES_CONNECTION_URL,
+import pg from "pg";
+import { db } from "../config/index.js";
+
+export const pool = new pg.Pool({
+  connectionString: db.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
-export default function query(text, params) {
-  return pool.query(text, params);
-}

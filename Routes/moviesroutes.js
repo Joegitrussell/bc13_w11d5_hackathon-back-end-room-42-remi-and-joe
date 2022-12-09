@@ -1,6 +1,7 @@
 import express from "express";
-const router = express.Router();
 import getMovies from "../Models/moviesmodels.js";
+
+const router = express.Router();
 
 router.get("/", async (req, res) => {
   console.log("test")
